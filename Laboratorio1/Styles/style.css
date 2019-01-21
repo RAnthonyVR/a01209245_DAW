@@ -1,0 +1,53 @@
+
+table{
+    background-color: #b7d7e8;
+    border-style:ridge;
+    border: 1px solid black;
+    padding: 4px 8px;
+    width: 100%;
+}
+
+table td{
+    border: 1px solid black;
+    padding: 4px 8px;
+    text-align: center;
+
+}
+
+img { 
+  width: 40%; 
+  height: 40%;
+  text-align: center;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+body{
+    background-color:azure;
+}
+
+h2, h4{
+    color:darkblue;
+    text-align:center;
+    font-family: sans-serif;
+}
+
+.seccion{
+    color:darkblue;
+    text-align:center;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.bigAndBlue{
+    color:deepskyblue;
+    font-size: 50px;
+    text-align: center;
+}
+
+.middle{
+    text-align: center;
+}
+}
