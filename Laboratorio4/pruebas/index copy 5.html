@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<!-- Created by Ricardo Antonio Vazquez R, A01209245, on January 23, 2019 -->
+<html lang="es">
+    <head>
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+        <table border="2" cellspacing="5">
+            <script language="javascript" type="text/javascript">
+                
+                class Person{
+                    
+                    
+                    constructor(coins, xPosition, yPosition){
+                        this.xPosition=xPosition;
+                        this.yPosition=yPosition;
+                        this.coins=coins;
+                    }
+                    
+                    moveUp(){
+                        this.xPosition+=1;
+                    }
+                    
+                    moveRight(){
+                        this.yPosition+=1;
+                    }
+                    pay(){ 
+                            this.coins+=1;   
+                
+                        
+                    }
+                }
+                
+                var numerOfMoves;
+               
+                numerOfMoves=prompt("Ingresa un numero de movimientos");
+                var move=new Array(numerOfMoves);
+                move=prompt("Ingresa el array");
+                const fafa= new Person(0,0,0);
+                
+                for(var i=0;i<numerOfMoves;i++){
+                    
+                    if(move.charAt(i)=="R"){
+                       fafa.moveRight();
+                        
+                    }if(move.charAt(i)=="U"){
+                       fafa.moveUp();
+                    }
+                    var x=fafa.xPosition;
+                    var y=fafa.yPosition;
+                    if(x!=0&&y!=0&&x==y){
+                       if(move.charAt(i)==move.charAt(i+1)){
+                          fafa.pay();
+                    }
+                    }
+                }
+                alert("" + fafa.coins);
+                
+
+            </script>
+        </table>
+        <noscript>
+          <p>You have JavaScript turned off </p>
+        </noscript>
+    </body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<!-- Created by Ricardo Antonio Vazquez R, A01209245, on January 27, 2019 -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- In order to use certain characters -->
+        <link href="Styles/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="script.js"></script>
+        <title>Laboratorio 3 DAW</title>
+    </head>
+
+    <body>
+
+         <header class="mainTitle">
+            <h1>Laboratorio 4</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+
+        <!-- Barra de navegación -->
+        <nav>
+            <table>
+            <tr>
+                <td> <a href="#Programas"> Programas en JavaScript </a> </td>
+                <td> <a href="#Preguntas"> Preguntas </a> </td>
+                <td> <a href="#AboutMe"> Sobre mí </a> </td> <!-- table column -->
+                <td> <a href="#Referencias"> Referencias </a> </td> <!-- table column -->
+            </tr>
+            </table>
+        </nav>
+
+
+        
+            
+        <section>
+
+            <article>
+                <header>
+                    <h2 id="Programas" >Programas en JavaScript</h2>
+                </header>
+                
+               
+                
+                
+                    <p><button onclick="programa1()">Probar programa 1</button></p>
+                    <p><button onclick="programa2()">Probar programa 2</button></p>
+                    <p id="prueba2"></p>
+                    <p><button onclick="programa3()">Probar programa 3</button></p>
+                    <p id="prueba3"></p>
+                    <p><button onclick="programa4()">Probar programa 4</button></p>
+                    <p id="prueba4"></p>
+                    <p><button onclick="programa5()">Probar programa 5</button></p>
+                    <p id="prueba5"></p>
+                    <p><button onclick="programa6()">Probar programa 6</button></p>
+                    <p id="prueba6"></p>
+                    <p><strong>Descripción del problema 6:</strong> Para este problema decidí hacer la solución con objetos
+                    para un programa de ACM: </p>
+                
+                <button onclick="programa1()">Click me</button>
+                <p id="demo"></p>
+                
+                <script language="javascript" type="text/javascript">
+                    function programa1(){
+                                var numerText = prompt("Ingrese la cantidad de respuestas deseadas: ","5");
+                                var n = parseInt(numerText);
+                                var text="";
+                                text=text+"<tr>"+"<th> Número </th>"+"<th>Cuadrado</th>"+"<th>Cubo</th></tr>"+"</tr>";
+
+                                for (var i = 0; i < n; i++) {
+                                    text=text+"<tr><td>"+i+"</td>"+"<td>" + i*i + "</td>"+"<td>" + i*i*i + "</td></tr>";
+                                }
+                                text=text+"<table border=1>"+text+"</table>";
+                                document.write(""+text);
+                                document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
+                            }
+                    
+                    function programa2(){
+                        var num1=Math.floor(Math.random() * 100);
+                        var num2=Math.floor(Math.random() * 100);
+
+                        var ans=num1+num2;
+                        var time1 = performance.now();
+                        var answer = prompt(num1+" + "+num2,"5");
+                        var time2 = performance.now();
+                        var n = parseInt(answer);
+                        if(n==ans){
+                           document.getElementById("prueba2").innerHTML ="Correcto"+"El usuaro tardó"+(time2-time1)+" milisegundos.";
+                        }else{
+                            document.getElementById("prueba2").innerHTML ="Incorrecto"+"El usuaro tardó"+(time2-time1)+" milisegundos.";
+                        }
+                    }
+                    
+                    function programa3(){
+                    var arrayNumbers = crearArreglo();
+                    var arrayAnswer = contador(arrayNumbers);
+                    alert(""+ arrayNumbers);
+                    alert("Cantidad de números negativos en el arreglo:  " + arrayAnswer[0]);
+                    alert("La cantidad de 0's:  " + arrayAnswer[1]);
+                    alert("Cantidad de valores mayores a 0 en el arreglo:  "+ arrayAnswer[2]);
+                    }
+
+                    function crearArreglo(){
+                        var array=new Array(10);
+                        var a;
+                        for(var i=0;i<10;i++){
+                            a= Math.floor(Math.random() * 200)-100;
+                            array[i]=a;
+                        }
+                        return array;
+                    }
+
+                    function contador(array) {
+                        var i;
+
+                        var arrayAnswer = [0,0,0];
+                        for(i in array){
+                            if(array[i]<0){
+                                arrayAnswer[0]++;
+                            }
+                            if(array[i]==0){
+                                arrayAnswer[1]++;
+                            }
+                            if(array[i]>0){
+                                arrayAnswer[2]++;
+                            }
+                        }
+                        return arrayAnswer;
+                    }
+                    
+                    function programa4(){
+                        var matrix = crearMatriz();
+                        var proms = promedios(matrix);
+                    }
+
+                    function crearMatriz(){
+                        var matrix = [];
+                        for(var i=0;i<3;i++){
+                            matrix[i]=crearArreglo();
+
+                        }
+                        return matrix;
+                    }
+
+                    function crearArreglo(){
+                        var array=new Array(3);
+                        var a;
+                        for(var i=0;i<3;i++){
+                            a= Math.floor(Math.random() * 100);
+                            array[i]=a;
+                        }
+                        return array;
+                    }
+
+                    function promedios(matriz) {
+                        var l=3;//matriz.length;
+                        var prom=Array(3);
+                        var acum=0;
+                        var text="";
+                        var promedioAux=0;
+
+                        for(var i=0;i<3;i++){
+
+                            for(var j=0;j<3;j++){
+                                acum=acum+parseInt(matriz[i][j]);
+                            }
+                            promedioAux=acum/3;
+                            prom[i]=promedioAux;
+                            text=text+"\nEn el renglon numero "+i+" el promedio es: "+ prom[i] + ", de los datos: "+ matriz[i]+"\n";
+                        }
+                        alert(text);
+                        return prom;
+                    }
+                    /* 5:
+                    Función: inverso. Parámetros: Un número. Regresa: El número con sus
+                    dígitos en orden inverso. */
+
+                    function inverso(n) {
+                        var i=0;
+                        var digito;
+
+                        while(n>0){
+                            digito = n % 10; //obtiene ultimo digito
+                            i = (i * 10) + digito ;//Se recorren las unidades y se agrega el ditio
+                            n=parseInt(n/10); //Se elimina el ultimo digito
+                        }
+                        return i;
+                    }
+
+                    function programa5(){
+                        alert("Numbero invertido: " + inverso( +prompt("Ingresa un numero a invertir")));
+                    }
+                    
+                    /* 6:
+                    Crea una solución para un problema de tu elección (puede ser algo relacionado
+                    con tus intereses, alguna problemática que hayas identificado en algún ámbito,
+                    un problema de programación que hayas resuelto en otro lenguaje, un problema
+                    de la ACM, entre otros). El problema debe estar descrito en un documento HTML,
+                     y la solución implementada en JavaScript, utilizando al menos la creación de
+                     un objeto, el objeto además de su constructor deben tener al menos 2 métodos.
+                    Muestra los resultados en el documento HTML. */
+
+                    class Person{
+                        constructor(coins, xPosition, yPosition){
+                            this.xPosition=xPosition;
+                            this.yPosition=yPosition;
+                            this.coins=coins;
+                        }
+                        moveUp(){
+                            this.xPosition+=1;
+                        }
+                        moveRight(){
+                            this.yPosition+=1;
+                        }
+                        pay(){
+                            this.coins+=1;
+                        }
+                    }
+
+                    function programa6(){
+                        var numerOfMoves;
+                        numerOfMoves=prompt("Ingresa un numero de movimientos");
+                        var move=new Array(numerOfMoves);
+                        move=prompt("Ingresa el array");
+                        const fafa= new Person(0,0,0);
+
+                        for(var i=0;i<numerOfMoves;i++){
+                            if(move.charAt(i)=="R"){
+                               fafa.moveRight();
+                            }
+                            if(move.charAt(i)=="U"){
+                               fafa.moveUp();
+                            }
+                            var x=fafa.xPosition;
+                            var y=fafa.yPosition;
+                            if(x!=0&&y!=0&&x==y){
+                               if(move.charAt(i)==move.charAt(i+1)){
+                                  fafa.pay();
+                               }
+                            }
+                        }
+                        alert(""+fafa.coins);
+                    }
+                    
+                </script>
+                
+                
+                <p></p>
+
+                <!--Content goes Here!-->
+
+                <hr>
+            </article>
+
+            <article>
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
+
+                    <ul>
+                        <li><strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong><br>
+                       Cabe mencionar JavaScript y Java no están relacionados en sí, JavaScript decidió incluir al nombre el “Java” porque cuando surgió JavaScript, Java era muy popular. <br>
+                        <strong>Diferencias:</strong>
+                            <ul>
+                                <li>JavaScript es un lenguaje de buscador basado en objetos. Java es un lenguaje orientado a objetos.</li>
+                                <li>Java es compilado para su ejecución mientras que JavaScript es interpretado.</li>
+                                <li>Java es más estricto y requiere que las variables sean declaradas y revisadas en tiempo de compilación antes de ser usadas. JavaScript es menos estricto en cuanto a reglas de sintaxis.</li>
+                                <li>Java puede ejecutarse en cualquier buscador o maquina virtual, JavaScript solo puede correr en buscador.</li>
+                                <li>Los objetos de JavaScript están basados en prototipos mientras que los objetos de Java están basados en clases.</li>
+                                <li>JavaScript requiere menos memoria que Java. [1]</li>
+                            </ul>
+
+                        <br>
+                        <strong>Semejanzas:</strong>
+                            <ul>
+                                <li>Ambos pueden trabajar en un servidor o en un buscador.</li>
+                                <li>Ambos tienen frameworks y librerías.</li>
+                                <li>Comparten una sintaxis similar a C.</li>
+                                <li>Son muy utilizadas en aplicaciones web del lado del cliente. [2]</li>
+                            </ul>
+
+                        </li>
+
+                        <li><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong><br>
+                          <ul>
+                              <li><strong>getFullYear(): </strong>Obtiene el año como número de cuatro digítos.</li>
+                              <li><strong>getMillisecods(): </strong>Obtiene los milisegundos.</li>
+                              <li><strong>getTime(): </strong>Obtiene el tiempo.</li>
+                              <li><strong>getDay(): </strong>Obtiene el dia de la semana en número</li>
+                              <li><strong>getDate(): </strong>Obtiene el dia del mes en número. [3]</li>
+                          </ul>
+                        </li>
+                        <li><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong> <br>
+                            <ul>
+                                <li><strong>concat(): </strong>Concatena dos arreglos.</li>
+                                <li><strong>every(): </strong>Verifica si todos elementos cumplen una condición.</li>
+                                <li><strong>find(): </strong>Busca un elemento del arreglo que cumpla una condición</li>
+                                <li><strong>pop(): </strong>Elimina el ultimo elemento de un arreglo y lo regresa.</li>
+                                <li><strong>join(): </strong>Forma una cadena con los elementos del arreglo.[4]</li>
+
+                            </ul>
+                        </li>
+                        <li><strong>¿Cómo se declara una variable con alcance local dentro de una función? </strong><br>
+                        Para declarar una variable local dentro de una función solamente basta con declarar la función e incluir la declaración de la variable dentro de la misma, como se muestra a continuación:<br>
+                        function myFuncion() {<br>
+                            var carro = "Prius";<br>
+                          }<br>
+                          <br>Esto significa que solamente se podrá acceder a la variable adentro de la función. Este tipo de variables son creadas cuando la función comienza y se elimina cuando la función termina. [5]
+
+                        </li>
+                        <li><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br>
+                          Que las variables globales pertenecen al objeto window y no se eliminarán al terminar la función sino hasta que la ventana del buscador sea cerrada. Es recomendable que esto no se haga a menos que sea con alguna intención justificada específica. [6]
+                        </li>
+                        <li><strong>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares? ¿Para qué podrías utilizar esto en una aplicación web?</strong><br>
+                          Se puede usar el método match()  que busca las coincidencias para una expresión regular y regresa los patrones. Regresa null si no se encontró. Se puede utilizar en una página web para encontrar contenido específico dada una expresión regular, facilita su búsqueda en toda la página.
+                        </li>
+
+                    </ul>
+                <hr>
+            </article>
+
+
+        </section>
+
+        <!-- Referencias -->
+        <section>
+                <header>
+                    <h2 id="Referencias"  >Referencias</h2>
+                </header>
+                    <p>[1] https://www.geeksforgeeks.org/difference-between-java-and-javascript/</p>
+                    <p>[2] https://www.electronicproducts.com/Programming/Software/Java_vs_JavaScript_differences_and_similarities.aspx</p>
+                    <p>[3] https://www.w3schools.com/js/js_date_methods.asp</p>
+                    <p>[4] https://www.w3schools.com/jsref/jsref_obj_array.asp</p>
+                    <p>[5] https://www.w3schools.com/js/js_scope.asp</p>
+                    <p>[6] https://www.w3schools.com/js/js_scope.asp</p>
+                    <p>[7] https://www.w3schools.com/jsref/jsref_match.asp</p>
+
+                <hr>
+        </section>
+
+        <footer id="AboutMe">
+            <p> Creada Ricardo Antonio Vazquez Rodriguez 2019</p>
+            <p>Correo Personal: apap71@gmail.com</p>
+            <p> Utilicé el editor de <strong>Brackets</strong> </p>
+            <p> Liga de descarga: <a href="http://brackets.io">Brackets.</a> </p>
+        </footer>
+    </body>
+
+</html>
