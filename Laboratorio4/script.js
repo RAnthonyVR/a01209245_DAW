@@ -6,57 +6,34 @@ Entrada: un número pedido con un prompt. Salida: Una tabla con los números del
 producir la salida */
 
 function programa1(){
-    var text="<table border="3" cellspacing="8"> ";
-    document.write("Programa 1 <br><br>");
-    var numerText = prompt("Enter a Value","5");
+    var numerText = prompt("Ingrese la cantidad de respuestas deseadas: ","5");
     var n = parseInt(numerText);
-    text=text+"<tr><th> Numero </th>"+"<th>Cuadrado</th>"+"<th>Cubo</th></tr>";
+    var text="";
+    text=text+"<tr>"+"<th> Número </th>"+"<th>Cuadrado</th>"+"<th>Cubo</th></tr>"+"</tr>";
 
-    for (var i = 1; i <= n; i++) {
-        text=text+"<tr><td>"+i+"</td>";
-        text=text+"<td>" + i*i + "</td>";
-        text=text+"<td>" + i*i*i + "</td></tr>";
-    }   
-    text+="</table>"
-    document.getElementById("prueba1").innerHTML=text;
+    for (var i = 0; i < n; i++) {
+        text=text+"<tr><td>"+i+"</td>"+"<td>" + i*i + "</td>"+"<td>" + i*i*i + "</td></tr>";
+    }
+    text=text+"<table border=1>"+text+"</table>";
+    document.write(""+text);
+    document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
 }
-
-function tony(){
-    document.getElementById("ok").innerHTML=text;
-}
-
-/* 2:
-Entrada: Usando un prompt se pide el resultado de la suma de 2 números
-generados de manera aleatoria. Salida: La página debe indicar si el
-resultado fue correcto o incorrecto, y el tiempo que tardó el usuario
-en escribir la respuesta. */
-
-function suma(){
+                    
+function programa2(){
     var num1=Math.floor(Math.random() * 100);
     var num2=Math.floor(Math.random() * 100);
-
     var ans=num1+num2;
     var time1 = performance.now();
     var answer = prompt(num1+" + "+num2,"5");
     var time2 = performance.now();
     var n = parseInt(answer);
     if(n==ans){
-      //document.write("Correcto");
-      //document.write("El usuaro tardó"+(time2-time1)+" milisegundos");
-      document.getElementById("prueba2").innerHTML ="Correcto"+"El usuaro tardó"+(time2-time1)+" milisegundos.";
+        document.getElementById("prueba2").innerHTML ="Correcto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.";
     }else{
-      //document.write("Incorrecto");
-      //document.write("El usuaro tardó"+(time2-time1)+" milisegundos");
-      document.getElementById("prueba2").innerHTML ="Incorrecto"+"El usuaro tardó"+(time2-time1)+" milisegundos.";
+        document.getElementById("prueba2").innerHTML ="Incorrecto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.";
     }
 }
-
-
-/* 3:
-Función: contador. Parámetros: Un arreglo de números. Regresa: La cantidad
-de números negativos en el arreglo, la cantidad de 0's, y la cantidad de
-valores mayores a 0 en el arreglo */
-
+                    
 function programa3(){
     var arrayNumbers = crearArreglo();
     var arrayAnswer = contador(arrayNumbers);
@@ -78,7 +55,6 @@ function crearArreglo(){
 
 function contador(array) {
     var i;
-
     var arrayAnswer = [0,0,0];
     for(i in array){
         if(array[i]<0){
@@ -93,12 +69,7 @@ function contador(array) {
     }
     return arrayAnswer;
 }
-
-
-/* 4:
-Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa:
-Un arreglo con los promedios de cada uno de los renglones de la matriz. */
-
+                    
 function programa4(){
     var matrix = crearMatriz();
     var proms = promedios(matrix);
@@ -108,8 +79,7 @@ function crearMatriz(){
     var matrix = [];
     for(var i=0;i<3;i++){
         matrix[i]=crearArreglo();
-
-    }
+    } 
     return matrix;
 }
 
@@ -131,7 +101,6 @@ function promedios(matriz) {
     var promedioAux=0;
 
     for(var i=0;i<3;i++){
-
         for(var j=0;j<3;j++){
             acum=acum+parseInt(matriz[i][j]);
         }
@@ -139,16 +108,11 @@ function promedios(matriz) {
         prom[i]=promedioAux;
         text=text+"\nEn el renglon numero "+i+" el promedio es: "+ prom[i] + ", de los datos: "+ matriz[i]+"\n";
     }
-    alert(text);
-    return prom;
+        alert(text);
+        return prom;
 }
 
-
-
-
-/* 5:
-Función: inverso. Parámetros: Un número. Regresa: El número con sus
-dígitos en orden inverso. */
+/* 5: Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso. */
 
 function inverso(n) {
     var i=0;
@@ -159,13 +123,13 @@ function inverso(n) {
         i = (i * 10) + digito ;//Se recorren las unidades y se agrega el ditio
         n=parseInt(n/10); //Se elimina el ultimo digito
     }
-    return i;
+    return i;                
 }
-
 function programa5(){
     alert("Numbero invertido: " + inverso( +prompt("Ingresa un numero a invertir")));
 }
-/* 6:
+                    
+/* 6:                   
 Crea una solución para un problema de tu elección (puede ser algo relacionado
 con tus intereses, alguna problemática que hayas identificado en algún ámbito,
 un problema de programación que hayas resuelto en otro lenguaje, un problema
@@ -200,19 +164,18 @@ function programa6(){
 
     for(var i=0;i<numerOfMoves;i++){
         if(move.charAt(i)=="R"){
-           fafa.moveRight();
+            fafa.moveRight();
         }
         if(move.charAt(i)=="U"){
-           fafa.moveUp();
+            fafa.moveUp();
         }
         var x=fafa.xPosition;
         var y=fafa.yPosition;
         if(x!=0&&y!=0&&x==y){
-           if(move.charAt(i)==move.charAt(i+1)){
-              fafa.pay();
-           }
+            if(move.charAt(i)==move.charAt(i+1)){
+                fafa.pay();
+            }
         }
     }
     alert(""+fafa.coins);
 }
-
