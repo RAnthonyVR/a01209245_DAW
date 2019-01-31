@@ -71,38 +71,38 @@
                     </tr>
                     <tr>
                         <td>
-                            <select>
-                              <option value="n0">0</option>
-                              <option value="n1">1</option>
-                              <option value="n2">2</option>
-                              <option value="n3">3</option>
+                            <select id="consola1">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
                             </select>
                         </td>
                         <td>
-                            <select>
-                              <option value="p0">0</option>
-                              <option value="p1">1</option>
-                              <option value="p2">2</option>
-                              <option value="p3">3</option>
+                            <select id="consola2">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
                             </select>
                         </td>
                         <td>
-                            <select>
-                              <option value="x0">0</option>
-                              <option value="x1">1</option>
-                              <option value="x2">2</option>
-                              <option value="x3">3</option>
+                            <select id="consola3">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
-                        <td><button onclick="añadirProducto()">Añadir al carrito</button></td>
+                        <td><button onclick="agregarProducto()">Añadir al carrito</button></td>
                     </tr>
                 
                 </table>
                 <p><strong>Carrito de compra</strong></p><br>
                 <p>El costo total es de:</p><br>
-                <p></p><br>
+                <p id="carrito"></p><br>
                 <button onclick="pagar()">Pagar</button><br>
                 
                 <hr>

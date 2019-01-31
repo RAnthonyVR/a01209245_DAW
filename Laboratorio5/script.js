@@ -54,6 +54,24 @@ function compararContraseñas() {
     }
 }
 
+function agregarProducto(){
+    let cantidad_nintendo = document.getElementById("consola1").value;
+    let cantidad_ps4 = document.getElementById("consola2").value;
+    let cantidad_xbox = document.getElementById("consola3").value;
+    let subtotal_nintendo=cantidad_nintendo*7000;
+    let subtotal_ps4=cantidad_ps4*10000;
+    let subtotal_xbox=cantidad_xbox*9000;
+    let text="";
+    if(cantidad_nintendo>0){
+        text+=cantidad_nintendo+ " nintendo   "+subtotal_nintendo+ "<br/>";
+    }if(cantidad_ps4>0){
+        text+=cantidad_ps4+ " ps4   "+subtotal_ps4+ "<br/>";
+    }if(cantidad_xbox>0){
+        text+=cantidad_xbox +" xbox   "+subtotal_xbox+ "<br/>";
+    }let total=subtotal_nintendo+subtotal_ps4+subtotal_xbox;
+    text+="total= "+ total+ " pesos." ;
+    document.getElementById("carrito").innerHTML = text;
+}
 
 function resultados(){
     let nom = document.getElementById("nombre").value;
