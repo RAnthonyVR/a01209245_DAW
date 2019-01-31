@@ -5,7 +5,7 @@ Entrada: un número pedido con un prompt. Salida: Una tabla con los números del
 1 al número dado con sus cuadrados y cubos. Utiliza document.write para
 producir la salida */
 
-function programa1(){
+function tablaCuadradosCubos(){
     var numerText = prompt("Ingrese la cantidad de respuestas deseadas: ","5");
     var n = parseInt(numerText);
     var text="";
@@ -18,8 +18,8 @@ function programa1(){
     document.write(""+text);
     document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
 }
-                    
-function programa2(){
+
+function sumaConContador(){
     var num1=Math.floor(Math.random() * 100);
     var num2=Math.floor(Math.random() * 100);
     var ans=num1+num2;
@@ -28,19 +28,22 @@ function programa2(){
     var time2 = performance.now();
     var n = parseInt(answer);
     if(n==ans){
-        document.getElementById("prueba2").innerHTML ="Correcto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.";
+        document.write("Correcto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.");
     }else{
-        document.getElementById("prueba2").innerHTML ="Incorrecto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.";
-    }
+        document.write("Incorrecto! "+"El usuaro tardó: "+(time2-time1)/1000+" segundos.");
+    }document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
+
 }
-                    
-function programa3(){
+
+function cantidadesEnArray(){
     var arrayNumbers = crearArreglo();
     var arrayAnswer = contador(arrayNumbers);
-    alert(""+ arrayNumbers);
-    alert("Cantidad de números negativos en el arreglo:  " + arrayAnswer[0]);
-    alert("La cantidad de 0's:  " + arrayAnswer[1]);
-    alert("Cantidad de valores mayores a 0 en el arreglo:  "+ arrayAnswer[2]);
+    document.write(""+ arrayNumbers+"<br>");
+    document.write("Cantidad de números negativos en el arreglo:  " + arrayAnswer[0]+"<br>");
+    document.write("La cantidad de 0's:  " + arrayAnswer[1]+"<br>");
+    document.write("Cantidad de valores mayores a 0 en el arreglo:  "+ arrayAnswer[2]+"<br>");
+    document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
+
 }
 
 function crearArreglo(){
@@ -69,8 +72,8 @@ function contador(array) {
     }
     return arrayAnswer;
 }
-                    
-function programa4(){
+
+function promediosMatriz(){
     var matrix = crearMatriz();
     var proms = promedios(matrix);
 }
@@ -79,7 +82,7 @@ function crearMatriz(){
     var matrix = [];
     for(var i=0;i<3;i++){
         matrix[i]=crearArreglo();
-    } 
+    }
     return matrix;
 }
 
@@ -106,9 +109,10 @@ function promedios(matriz) {
         }
         promedioAux=acum/3;
         prom[i]=promedioAux;
-        text=text+"\nEn el renglon numero "+i+" el promedio es: "+ prom[i] + ", de los datos: "+ matriz[i]+"\n";
+        text=text+"<br>"+"En el renglon numero "+i+" el promedio es: "+ prom[i] + ", de los datos: "+ matriz[i]+"<br>";
     }
-        alert(text);
+        document.write(text);
+        document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
         return prom;
 }
 
@@ -123,13 +127,14 @@ function inverso(n) {
         i = (i * 10) + digito ;//Se recorren las unidades y se agrega el ditio
         n=parseInt(n/10); //Se elimina el ultimo digito
     }
-    return i;                
+    return i;
 }
-function programa5(){
-    alert("Numbero invertido: " + inverso( +prompt("Ingresa un numero a invertir")));
+function invertirNumero(){
+    document.write("Numbero invertido: " + inverso( +prompt("Ingresa un numero a invertir")));
+    document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
 }
-                    
-/* 6:                   
+
+/* 6:
 Crea una solución para un problema de tu elección (puede ser algo relacionado
 con tus intereses, alguna problemática que hayas identificado en algún ámbito,
 un problema de programación que hayas resuelto en otro lenguaje, un problema
@@ -155,7 +160,7 @@ class Person{
     }
 }
 
-function programa6(){
+function problemaACM(){
     var numerOfMoves;
     numerOfMoves=prompt("Ingresa un numero de movimientos");
     var move=new Array(numerOfMoves);
@@ -177,5 +182,7 @@ function programa6(){
             }
         }
     }
-    alert(""+fafa.coins);
+    document.write(""+fafa.coins);
+    document.write('<br><br><a href="index.html"> Regresar a la página principal</a>');
+
 }
