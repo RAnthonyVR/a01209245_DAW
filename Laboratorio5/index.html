@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!-- Created by Ricardo Antonio Vazquez R, A01209245, on January 27, 2019 -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- In order to use certain characters -->
+        <link href="Styles/style.css" rel="stylesheet" type="text/css">
+        
+        <title>Validar Passwords</title>
+    </head>
+
+    <body>
+
+         <header class="mainTitle">
+            <h1>Validar Passwords</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+            
+        <section>
+
+            <article class="middle">
+                <header>
+                    <h2 id="Programas" >Validador</h2>
+                </header>
+                <p>Tu contraseña debe de tener más de 6 caracteres, contener al menos letras, numeros y simbolos especiales.</p>
+                
+                
+                <label>Ingresa la contraseña: </label><input type="text" id="p1" value="">
+                 <p id="demo"></p>
+                <br>
+                <label>Fortaleza: </label>
+                <progress  max="100" value="0" id="validacion" ></progress>
+                <br>
+                
+                <label>Vuelva a ingresar la contraseña: </label><input type="text" id="p2">
+                <button onclick="compararContraseñas()">¡Validar!</button>
+                <br>
+                <p id="feedback"></p>
+                
+                <!--Content goes Here!-->
+
+                <hr>
+            </article>
+
+        </section>
+        
+        
+        <section>
+
+            <article class="middle">
+                <header>
+                    <h2 id="Consolas" >Ventas de consolas de videojuegos</h2>
+                </header>
+                <p>Para evitar la reventa de los productos solamente podrás comprar máximo 2 consolas iguales.</p>
+                <table>
+                    <tr>
+                        <th>Nintendo</th>
+                        <th>PlayStation</th>
+                        <th>Xbox</th>
+                    </tr>
+                    <tr>
+                        <td>$7,000.00</td>
+                        <td>$10,000.00</td>
+                        <td>$9,000.00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/nintendo.jpg" alt="Nintendo" ></td>
+                        <td><img src="Images/ps4.jpg " alt="PlayStation"></td>
+                        <td><img src="Images/xbox.jpeg" alt="Xbox"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                              <option value="n0">0</option>
+                              <option value="n1">1</option>
+                              <option value="n2">2</option>
+                              <option value="n3">3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                              <option value="p0">0</option>
+                              <option value="p1">1</option>
+                              <option value="p2">2</option>
+                              <option value="p3">3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                              <option value="x0">0</option>
+                              <option value="x1">1</option>
+                              <option value="x2">2</option>
+                              <option value="x3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="añadirProducto()">Añadir al carrito</button></td>
+                    </tr>
+                
+                </table>
+                <p><strong>Carrito de compra</strong></p><br>
+                <p>El costo total es de:</p><br>
+                <p></p><br>
+                <button onclick="pagar()">Pagar</button><br>
+                
+                <hr>
+            </article>
+            
+            
+            <article>
+                <h2>Calcula tu huella de carbono en tu hogar</h2>
+                <br>
+                <p>Aprende el daño que le estas haciendo al medio ambiente</p>
+                <br>
+                <p>Ingresa tu nombre (será confidencial):</p>
+                <br>
+                <p>Ingresa tu correo:</p>
+                <br>
+                <p>Ingresa al año cuanto consumes de:</p>
+                <br>
+                <p>Electicidad: </p><p> kWh/año </p> <br> 181 g de CO2/kWh
+                <p>Gas LP: </p><p> litros/año  </p> <br> 2,96 kg CO2/kg de GLP genérico
+                <p>Gas propano: </p><p> kg/año </p> <br> 2,94 kg CO2/kg de gas propano
+                <button onclick="resultados()">Ver resultados</button>
+                
+                
+            
+            </article>
+            
+            Tu huella es de    toneladas al año
+            La huella media por persona en Esatdos Unidos es de 16.49 toneladas.
+            La huella de carbono media mundial es de unas 4 toneladas.
+
+        </section>
+        
+        
+        
+        <script type="text/javascript" src="script.js"></script>
+        <footer id="AboutMe">
+            <p> Creada Ricardo Antonio Vazquez Rodriguez 2019</p>
+            <p>Correo Personal: apap71@gmail.com</p>
+            <p> Utilicé el editor de <strong>Brackets</strong> </p>
+            <p> Liga de descarga: <a href="http://brackets.io">Brackets.</a> </p>
+        </footer>
+    </body>
+
+</html>
+
+
