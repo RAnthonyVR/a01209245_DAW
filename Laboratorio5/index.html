@@ -111,33 +111,33 @@
             
             <article>
                 <h2>Calcula tu huella de carbono en tu hogar</h2>
+                <img src="Images/eco.jpg" alt="Eco">
                 <br>
                 <p>Aprende el daño que le estas haciendo al medio ambiente</p>
                 <br>
-                <p>Ingresa tu nombre (será confidencial):</p>
+                <p>Ingresa tu nombre (será confidencial):</p><input type="text" id="nombre"><p id="retro1"></p>
                 <br>
-                <p>Ingresa tu correo:</p>
+                <p>Ingresa tu correo:</p><input type="text" id="correo"><p id="retro2"></p>
                 <br>
                 <p>Ingresa al año cuanto consumes de:</p>
                 <br>
-                <p>Electicidad: </p><p> kWh/año </p> <br> 181 g de CO2/kWh
-                <p>Gas LP: </p><p> litros/año  </p> <br> 2,96 kg CO2/kg de GLP genérico
-                <p>Gas propano: </p><p> kg/año </p> <br> 2,94 kg CO2/kg de gas propano
+                <p>Electicidad: <input type="text" id="elect"> kWh/año </p><p id="retro3"></p> <br> 
+                <p>Gas LP: <input type="text" id="glp"> litros/año  </p><p id="retro4"></p> <br> 
+                <p>Gas propano: <input type="text" id="gp"> kg/año </p><p id="retro5"></p> <br> 
                 <button onclick="resultados()">Ver resultados</button>
-                
+                <p><strong>Aquí aparecerá el resultado: </strong></p>
+                <p id=res></p>
                 
             
             </article>
             
-            Tu huella es de    toneladas al año
-            La huella media por persona en Esatdos Unidos es de 16.49 toneladas.
-            La huella de carbono media mundial es de unas 4 toneladas.
+            
 
         </section>
-        
-        
-        
+    
         <script type="text/javascript" src="script.js"></script>
+        
+        <hr>
         <footer id="AboutMe">
             <p> Creada Ricardo Antonio Vazquez Rodriguez 2019</p>
             <p>Correo Personal: apap71@gmail.com</p>
