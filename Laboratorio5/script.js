@@ -61,6 +61,7 @@ function agregarProducto(){
     let subtotal_nintendo=cantidad_nintendo*7000;
     let subtotal_ps4=cantidad_ps4*10000;
     let subtotal_xbox=cantidad_xbox*9000;
+    let iva;
     let text="";
     if(cantidad_nintendo>0){
         text+=cantidad_nintendo+ " nintendo   "+subtotal_nintendo+ "<br/>";
@@ -69,7 +70,12 @@ function agregarProducto(){
     }if(cantidad_xbox>0){
         text+=cantidad_xbox +" xbox   "+subtotal_xbox+ "<br/>";
     }let total=subtotal_nintendo+subtotal_ps4+subtotal_xbox;
-    text+="total= "+ total+ " pesos." ;
+    iva=total*.16;
+    let totalIVA=total+iva;
+    text+="IVA= "+ iva+ " pesos. <br/>" ;
+
+    text+="total in IVA= "+ total+ " pesos. <br/>" ;
+    text+="total con IVA= "+ totalIVA+ " pesos. <br/>" ;
     document.getElementById("carrito").innerHTML = text;
 }
 
