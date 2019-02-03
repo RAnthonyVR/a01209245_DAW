@@ -98,9 +98,8 @@ body{
 h2,h4{color:#00008b;font-family:sans-serif;margin-top:1em;padding-top:1em
 
 position: absolute;
-  top: 0px;
-  border: 3px solid blue;}
-h2{font-size: 75%}
+  top: 10px;
+  }
 
 .mainTitle{color:#00bfff;font-size:30px}
 

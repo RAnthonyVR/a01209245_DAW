@@ -15,14 +15,14 @@
             <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
             <div></div>
         </header>
-        <hr>s
         
         <!-- Barra de navegación -->
         <nav>
             <table>
             <tr>
-                <td> <a href="#Tutoriales"> Programas en JavaScript </a> </td>
+                <td> <a href="#Tutoriales"> Tutoriales </a> </td>
                 <td> <a href="#Preguntas"> Preguntas </a> </td>
+                <td> <a href="#Form"> Form dinámico </a> </td>
                 <td> <a href="#Referencias"> Referencias </a> </td>
                 <td> <a href="#AboutMe"> Sobre mí </a> </td> <!-- table column -->
             </tr>
@@ -41,7 +41,7 @@
                     <p >Watermark Tony</p>
                 </div>
                 
-                <p><strong>Tutorial 1 CSS propiedad top</strong></p><br>
+                <p><strong>Tutorial CSS propiedad top</strong></p><br>
                 <p>El marco rojo es un div con pisción relativa a la página, sirve para contener a los divs absolutos en una posición fija.</p>
                 <div class="a">
                     <div class="b">Este div tiene como posición absolute (posicion fija dentro del div rojo) y en top: 0.</div>  
@@ -50,10 +50,48 @@
                 
                 
                 <p  id="cambio" onmouseover="cambiaEstilo()"  onmouseout="regresaEstilo()" class="rojo"><strong>¡Si haces hover encima del este texto cambiará de fuente!</strong></p><br>
-                <p>Selecciona el boton "Mover" para cambiar el div de abolute a relative</p>
                 
+                <hr>
+            </article>
+            <article>
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
                 
-                <h2>Calcula tu huella de carbono en tu hogar</h2>
+                <div>
+                    <strong>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</strong><br>
+                        La propiedad position es utilizada para posicionar algún elemento en la pagina web.  <br>
+                            
+                            <ul>
+                                <li><strong>static: </strong>Un elemento es asignado este valor por default esta posición. Lo que hace es que hace que el elemento se encuentre estático en la posición donde le corresponde dentro de la página. Las propiedades top, left, right y bottom por lo tanto no tienen efecto en el posicionamiento del elemento.</li>
+                                <li><strong>relative: </strong>Permite posicionar un elemento respecto a la posición por defecto del elemento dentro de la página. Se pueden utilizar las propiedades top, left, right y bottom para posicionar el elemento dentro de la página. [1]</li>
+                                <li><strong>absolute: </strong>El elemento se posiciona respecto a su anterior elemento que no es estático.</li>
+                                <li><strong>fixed: </strong>El elemento se posiciona respecto a la ventana del buscador.</li>
+                                <li><strong>sticky: </strong>El elemento se posiciona respecto al desplazamiento o movimiento del cursor. Se podría decir que es una combinación entre relative y fixed.</li>
+                                <li><strong>initial: </strong>Pone la propiedad del elemento en su valor por defecto.</li>
+                                <li><strong>inherit: </strong>Hace que el elemento herede la propiedad que tiene el elemento padre. [2]</li>
+                            </ul>
+                        
+                </div>
+                
+                <div>
+                    <strong>¿Cuáles son los valores estándar para la propiedad visibility?</strong><br>
+                        La propiedad visibility en CSS especifica si un elemento es visible o no. El valor por default es visible, también se puede utilizar el valor hidden para que se oculte, aunque también toma espacio. Valor collapse elimina elementos de una tabla. El valor initial pone la propiedad en su valor por defecto e inherit hace que herede la propiedad de sus padres. [3]
+                        
+                </div>
+
+                
+                <div>
+                
+                <strong>¿Qué es el zIndex y para qué sirve?</strong><br>
+                        Es un a propiedad que especifica el orden de un elemento. Esto se hace siguiendo un orden de stack. Solo funciona en absolute, relative y en fixed. Se utiliza para que puedas colocar un elemento encima de otro. [4]
+                        
+                        
+                </div>
+                <hr>
+            </article>
+            <article>
+                <h2 id="Form" >Calcula tu huella de carbono en tu hogar</h2>
                     <br>
                     <p>Aprende el daño que le estas haciendo al medio ambiente</p>
                     <br>
@@ -100,77 +138,8 @@
                     <div id="cajaDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     <br>
                     <img id="drag1" src="Images/eco.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69" alt="Eco">
-                
-
-
-            <hr>
-                
-                
-
-                <button onclick="cambiarPosition()">Mover</button>
-
-                <div id="divMovible">
-                  <p>This DIV element is placed 20 pixels from the top of its original position.</p>
-                  <p>Click the button to set the position property to "absolute" and see what happens.</p>
-                  <p>It will then be placed 20 pixels from the top the page.</p>
-                </div>
-                
-                <p><strong>Tutorial 2 CSS propiedad top</strong></p><br>
-                <p>El marco rojo es un div con pisción relativa a la página, sirve para contener a los divs absolutos en una posición fija.</p>
-                <div class="a">
-                    <div class="b">Este div tiene como posición absolute (posicion fija dentro del div rojo) y en top: 0.</div>  
-                    <div class="b">Este div tiene la misma clase html que el anterior, entonces al ser absolute se coloca 0 pixeles de distancia sobre el final del fina anterior </div>
-                
-                </div>
-                
-
-                <hr>
             </article>
-
-
-            <article>
-                
-
-
-            </article>
-            <hr>
-            <article>
-                <header>
-                    <h2 id="Preguntas" >Preguntas</h2>
-                </header>
-                
-                <div>
-                    <strong>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</strong><br>
-                        La propiedad position es utilizada para posicionar algún elemento en la pagina web.  <br>
-                            
-                            <ul>
-                                <li><strong>static: </strong>Un elemento es asignado este valor por default esta posición. Lo que hace es que hace que el elemento se encuentre estático en la posición donde le corresponde dentro de la página. Las propiedades top, left, right y bottom por lo tanto no tienen efecto en el posicionamiento del elemento.</li>
-                                <li><strong>relative: </strong>Permite posicionar un elemento respecto a la posición por defecto del elemento dentro de la página. Se pueden utilizar las propiedades top, left, right y bottom para posicionar el elemento dentro de la página. [1]</li>
-                                <li><strong>absolute: </strong>El elemento se posiciona respecto a su anterior elemento que no es estático.</li>
-                                <li><strong>fixed: </strong>El elemento se posiciona respecto a la ventana del buscador.</li>
-                                <li><strong>sticky: </strong>El elemento se posiciona respecto al desplazamiento o movimiento del cursor. Se podría decir que es una combinación entre relative y fixed.</li>
-                                <li><strong>initial: </strong>Pone la propiedad del elemento en su valor por defecto.</li>
-                                <li><strong>inherit: </strong>Hace que el elemento herede la propiedad que tiene el elemento padre. [2]</li>
-                            </ul>
-                        
-                </div>
-                
-                <div>
-                    <strong>¿Cuáles son los valores estándar para la propiedad visibility?</strong><br>
-                        La propiedad visibility en CSS especifica si un elemento es visible o no. El valor por default es visible, también se puede utilizar el valor hidden para que se oculte, aunque también toma espacio. Valor collapse elimina elementos de una tabla. El valor initial pone la propiedad en su valor por defecto e inherit hace que herede la propiedad de sus padres. [3]
-                        
-                </div>
-
-                
-                <div>
-                
-                <strong>¿Qué es el zIndex y para qué sirve?</strong><br>
-                        Es un a propiedad que especifica el orden de un elemento. Esto se hace siguiendo un orden de stack. Solo funciona en absolute, relative y en fixed. Se utiliza para que puedas colocar un elemento encima de otro. [4]
-                        
-                        
-                </div>
-                <hr>
-            </article>
+            
 
 
         </section>
@@ -185,7 +154,7 @@
                     <div >[1] https://es.stackoverflow.com/questions/37930/cual-es-la-diferencia-entre-position-relative-position-absolute-y-position</div>
                     <div >[2] https://www.w3schools.com/cssref/pr_class_position.asp</div>
                     <div >[3] https://www.w3schools.com/cssref/pr_class_visibility.asp</div>
-                    <div class="b">[4] https://developer.mozilla.org/en-US/docs/Web/CSS/z-index</div>
+                    <div>[4] https://developer.mozilla.org/en-US/docs/Web/CSS/z-index</div>
 
                 
         </section>
