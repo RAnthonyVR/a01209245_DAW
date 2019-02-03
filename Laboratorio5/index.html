@@ -20,12 +20,15 @@
         <!-- Barra de navegación -->
         <nav>
             <table>
-            <tr>
-                <td> <a href="#Programas"> Programas en JavaScript </a> </td>
-                <td> <a href="#Preguntas"> Preguntas </a> </td>
-                <td> <a href="#AboutMe"> Sobre mí </a> </td> <!-- table column -->
-                <td> <a href="#Referencias"> Referencias </a> </td> <!-- table column -->
-            </tr>
+                <tbody>
+                    <tr>
+                        <td> <a href="#Programas"> Programas en JavaScript </a> </td>
+                        <td> <a href="#Preguntas"> Preguntas </a> </td>
+                        <td> <a href="#AboutMe"> Sobre mí </a> </td> <!-- table column -->
+                        <td> <a href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                    </tr>
+                </tbody>
+            
             </table>
         </nav>
 
@@ -65,52 +68,63 @@
                 </header>
                 <p>Para evitar la reventa de los productos solamente podrás comprar máximo 2 consolas iguales.</p>
                 <table>
-                    <tr>
-                        <th>Nintendo</th>
-                        <th>PlayStation</th>
-                        <th>Xbox</th>
-                    </tr>
-                    <tr>
-                        <td>$7,000.00</td>
-                        <td>$10,000.00</td>
-                        <td>$9,000.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="Images/nintendo.jpg" alt="Nintendo" ></td>
-                        <td><img src="Images/ps4.jpg " alt="PlayStation"></td>
-                        <td><img src="Images/xbox.jpeg" alt="Xbox"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select id="consola1">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select id="consola2">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select id="consola3">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Nintendo</th>
+                            <th>PlayStation</th>
+                            <th>Xbox</th>
+                        </tr>
+                    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$7,000.00</td>
+                            <td>$10,000.00</td>
+                            <td>$9,000.00</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Images/nintendo.jpg" alt="Nintendo" ></td>
+                            <td><img src="Images/ps4.jpg " alt="PlayStation"></td>
+                            <td><img src="Images/xbox.jpeg" alt="Xbox"></td>
+                        </tr>
+                    
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <select id="consola1">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="consola2">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="consola3">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    
                     <tr>
                         <td><button onclick="agregarProducto()">Añadir al carrito</button></td>
                     </tr>
 
                 </table>
+                
                 <p><strong>Carrito de compra</strong></p><br>
                 <p>El costo total es de:</p><br>
                 <p id="carrito"></p><br>
