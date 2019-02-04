@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<!-- Created by Ricardo Antonio Vazquez R, A01209245, on January 27, 2019 -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- In order to use certain characters -->
+        <link href="Styles/style.css" rel="stylesheet" type="text/css">
+
+        <title>Laboratorio 5</title>
+    </head>
+    
+    <body>
+
+         <header class="mainTitle">
+            <h1>Laboratorio 5</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+        
+        <!-- Barra de navegación -->
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <a href="#Programas"> Programas en JavaScript </a> </td>
+                        <td> <a href="#Preguntas"> Preguntas </a> </td>
+                        <td> <a href="#AboutMe"> Sobre mí </a> </td> <!-- table column -->
+                        <td> <a href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                    </tr>
+                </tbody>
+            
+            </table>
+        </nav>
+
+        <section>
+            <article class="middle">
+                <header>
+                    <h2 id="Programas" >Validador</h2>
+                </header>
+                <p>Tu contraseña debe de tener más de 6 caracteres, contener al menos letras, numeros y simbolos especiales.</p>
+
+
+                <label>Ingresa la contraseña: </label><input type="text" id="p1" value="">
+                 <p id="demo"></p>
+                <br>
+                <label>Fortaleza: </label>
+                <progress  max="100" value="0" id="validacion" ></progress>
+                <br>
+
+                <label>Vuelva a ingresar la contraseña: </label><input type="text" id="p2">
+                <button onclick="compararContraseñas()">¡Validar!</button>
+                <br>
+                <p id="feedback"></p>
+
+                <!--Content goes Here!-->
+
+                <hr>
+            </article>
+
+        </section>
+
+
+        <section>
+
+            <article class="middle">
+                <header>
+                    <h2 id="Consolas" >Ventas de consolas de videojuegos</h2>
+                </header>
+                <p>Para evitar la reventa de los productos solamente podrás comprar máximo 2 consolas iguales.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nintendo</th>
+                            <th>PlayStation</th>
+                            <th>Xbox</th>
+                        </tr>
+                    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$7,000.00</td>
+                            <td>$10,000.00</td>
+                            <td>$9,000.00</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Images/nintendo.jpg" alt="Nintendo" ></td>
+                            <td><img src="Images/ps4.jpg " alt="PlayStation"></td>
+                            <td><img src="Images/xbox.jpeg" alt="Xbox"></td>
+                        </tr>
+                    
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <select id="consola1">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="consola2">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="consola3">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    
+                    <tr>
+                        <td><button onclick="agregarProducto()">Añadir al carrito</button></td>
+                    </tr>
+
+                </table>
+                
+                <p><strong>Carrito de compra</strong></p><br>
+                <p>El costo total es de:</p><br>
+                <p id="carrito"></p><br>
+                <button onclick="pagar()">Pagar</button><br>
+
+                <hr>
+            </article>
+
+
+            <article>
+                <h2>Calcula tu huella de carbono en tu hogar</h2>
+                <img src="Images/eco.jpg" alt="Eco">
+                <br>
+                <p>Aprende el daño que le estas haciendo al medio ambiente</p>
+                <br>
+                <p>Ingresa tu nombre (será confidencial):</p><input type="text" id="nombre"><p id="retro1"></p>
+                <br>
+                <p>Ingresa tu correo:</p><input type="text" id="correo"><p id="retro2"></p>
+                <br>
+                <p>Ingresa al año cuanto consumes de:</p>
+                <br>
+                <p>Electicidad: <input type="text" id="elect"> kWh/año </p><p id="retro3"></p> <br>
+                <p>Gas LP: <input type="text" id="glp"> litros/año  </p><p id="retro4"></p> <br>
+                <p>Gas propano: <input type="text" id="gp"> kg/año </p><p id="retro5"></p> <br>
+                <button onclick="resultados()">Ver resultados</button>
+                <p><strong>Aquí aparecerá el resultado: </strong></p>
+                <p id=res></p>
+
+
+            </article>
+            <hr>
+            <article>
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
+
+                    <ul>
+                        <li><strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong><br>
+                       Cabe mencionar JavaScript y Java no están relacionados en sí, JavaScript decidió incluir al nombre el “Java” porque cuando surgió JavaScript, Java era muy popular. <br>
+                        Porque al momento de enviar datos al servidor y previamente haberlos validado en JavaScript, entonces nos aseguramos de que todos los datos del servidor son válidos. Además, es muy común que los usuarios se equivoquen e ingresen datos inválidos. Al hacer la validación desde el lado del cliente y no desde el lado del servidor se puede ahorrar el tiempo de respuesta a algún cliente, haciéndolo de manera inmediata. Esto ahorra el tener que validar de alguna forma toda la información que contiene el servidor. [1]<br>Entre los distintos beneficios de poner esto en práctica se encuentran: Asegurar que la información sea de un tipo de dato específico, correos electrónicos validos y el asegurar que alguna información necesaria sea ingresada por el usuario (por medio de los campos obligatorios). También conocidos como valores nulos. [2]
+                        </li>
+                        
+                        <li><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong><br>
+                        Puedes desabilitar Javascript en el buscador, para ello solo es necesario ir a las configuraciones especificas del buscador. Esto desabilita completamente Javascript.
+                        </li>
+                        
+                        <li><strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong><br>
+                        Porque no todas las personas o usuarios son consientes de esta opción. Además de ello, la validación desde el lado del cliente además de tener beneficios de seguridad le ayuda al cliente a tener una respuesta inmediata ante una solicitud. Aun así existen validaciones desde el lado del servidor, pero tener un filtro desde el lado del cliente siempre es un buena práctica
+                        
+                        </li>
+
+                    </ul>
+                <hr>
+            </article>
+
+
+        </section>
+
+        <script type="text/javascript" src="Scripts/script.js"></script>
+        
+        <!-- Referencias -->
+        <section>
+                <header>
+                    <h2 id="Referencias"  >Referencias</h2>
+                </header>
+                    <p>[1] https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos</p>
+                    <p>[2] https://michelletorres.mx/validar-formularios-con-javascript/</p>
+
+                
+        </section>
+        
+        <hr>
+        <footer id="AboutMe">
+            <p> Creada Ricardo Antonio Vazquez Rodriguez 2019</p>
+            <p>Correo Personal: apap71@gmail.com</p>
+            <p> Utilicé el editor de <strong>Brackets</strong> </p>
+            <p> Liga de descarga: <a href="http://brackets.io">Brackets.</a> </p>
+        </footer>
+    </body>
+
+</html>
