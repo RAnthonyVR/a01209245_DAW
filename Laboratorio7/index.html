@@ -3,15 +3,22 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8"> <!-- In order to use certain characters -->
-        <link href="Styles/style.css" rel="stylesheet" type="text/css">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--Import my styles-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Laboratorio 5</title>
+   
+        <title>Laboratorio 7</title>
     </head>
     
     <body>
 
          <header class="mainTitle">
-            <h1>Laboratorio 5</h1>
+            <h1>Laboratorio 7</h1>
             <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
             <div></div>
         </header>
@@ -41,16 +48,17 @@
 
 
                 <label>Ingresa la contraseña: </label><input type="text" id="p1" value="">
-                 <p id="demo"></p>
+                 
                 <br>
                 <label>Fortaleza: </label>
-                <progress  max="100" value="0" id="validacion" ></progress>
+                
+                <progress  class="progress-bar progress-bar-striped" role="progressbar" max="100" value="0" id="validacion" ></progress>
                 <br>
 
                 <label>Vuelva a ingresar la contraseña: </label><input type="text" id="p2">
                 <button onclick="compararContraseñas()">¡Validar!</button>
                 <br>
-                <p id="feedback"></p>
+                <p id="feedback" class="alert alert-primary" role="alert"></p>
 
                 <!--Content goes Here!-->
 
@@ -67,12 +75,12 @@
                     <h2 id="Consolas" >Ventas de consolas de videojuegos</h2>
                 </header>
                 <p>Para evitar la reventa de los productos solamente podrás comprar máximo 2 consolas iguales.</p>
-                <table>
+                <table class="table table-dark">
                     <thead>
                         <tr>
-                            <th>Nintendo</th>
-                            <th>PlayStation</th>
-                            <th>Xbox</th>
+                            <th scope="col">Nintendo</th>
+                            <th scope="col">PlayStation</th>
+                            <th scope="col">Xbox</th>
                         </tr>
                     
                     </thead>
@@ -120,7 +128,9 @@
                     </tfoot>
                     
                     <tr>
+                        <td></td>
                         <td><button onclick="agregarProducto()">Añadir al carrito</button></td>
+                        <td></td>
                     </tr>
 
                 </table>
@@ -162,20 +172,9 @@
                 </header>
 
                     <ul>
-                        <li><strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong><br>
-                       Cabe mencionar JavaScript y Java no están relacionados en sí, JavaScript decidió incluir al nombre el “Java” porque cuando surgió JavaScript, Java era muy popular. <br>
-                        Porque al momento de enviar datos al servidor y previamente haberlos validado en JavaScript, entonces nos aseguramos de que todos los datos del servidor son válidos. Además, es muy común que los usuarios se equivoquen e ingresen datos inválidos. Al hacer la validación desde el lado del cliente y no desde el lado del servidor se puede ahorrar el tiempo de respuesta a algún cliente, haciéndolo de manera inmediata. Esto ahorra el tener que validar de alguna forma toda la información que contiene el servidor. [1]<br>Entre los distintos beneficios de poner esto en práctica se encuentran: Asegurar que la información sea de un tipo de dato específico, correos electrónicos validos y el asegurar que alguna información necesaria sea ingresada por el usuario (por medio de los campos obligatorios). También conocidos como valores nulos. [2]
+                        <li><strong>Describe Material design</strong><br>
+                        Material Design es un lenguaje de diseño creado por Google en 2014 que esta orientado principalmente a Android. Busca agregar nuevas características y funcionalidades por medio de diferentes gestos intuitivos y que simulen objetos de la vida real. Algunos intentos de mejorar la experiencia del usuario son por medio de efectos 3D y otras animaciones de luz y movimiento.[1]<br>
                         </li>
-                        
-                        <li><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong><br>
-                        Puedes desabilitar Javascript en el buscador, para ello solo es necesario ir a las configuraciones especificas del buscador. Esto desabilita completamente Javascript.
-                        </li>
-                        
-                        <li><strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong><br>
-                        Porque no todas las personas o usuarios son consientes de esta opción. Además de ello, la validación desde el lado del cliente además de tener beneficios de seguridad le ayuda al cliente a tener una respuesta inmediata ante una solicitud. Aun así existen validaciones desde el lado del servidor, pero tener un filtro desde el lado del cliente siempre es un buena práctica
-                        
-                        </li>
-
                     </ul>
                 <hr>
             </article>
@@ -183,16 +182,14 @@
 
         </section>
 
-        <script type="text/javascript" src="Scripts/script.js"></script>
+        
         
         <!-- Referencias -->
         <section>
                 <header>
                     <h2 id="Referencias"  >Referencias</h2>
                 </header>
-                    <p>[1] https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos</p>
-                    <p>[2] https://michelletorres.mx/validar-formularios-con-javascript/</p>
-
+                    <p>[1] https://www.interaction-design.org/literature/topics/material-design</p>
                 
         </section>
         
@@ -203,6 +200,15 @@
             <p> Utilicé el editor de <strong>Brackets</strong> </p>
             <p> Liga de descarga: <a href="http://brackets.io">Brackets.</a> </p>
         </footer>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Import my JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
     </body>
 
 </html>
