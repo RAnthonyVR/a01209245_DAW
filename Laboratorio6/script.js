@@ -1,4 +1,9 @@
 
+//Se trató de implementar la recomendacion de Dan Elias pero al no estar en script no funciono
+/**
+document.getElementbyId("cambio").onmouseout=regresaEstilo;
+document.getElementbyId("cambio").onmouseover=cambiaEstilo;
+*/
 
 //Este es el setInterval que se usó para recordar al usuario contestar la encuesta
 var recordatorio=setInterval(function(){ alert("No has calculado tu huella de carbono, hasta llenarla, esto desaparecerá"); }, 10000);
@@ -8,7 +13,7 @@ function cambiaEstilo(){
 
 
 function regresaEstilo(){
-	//document.getElementById("cambio").style.fontStyle = "normal";
+	document.getElementById("cambio").style.fontStyle = "normal";
 	
 
 }
