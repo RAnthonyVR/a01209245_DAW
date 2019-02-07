@@ -1,4 +1,6 @@
 
+
+//Este es el setInterval que se usó para recordar al usuario contestar la encuesta
 var recordatorio=setInterval(function(){ alert("No has calculado tu huella de carbono, hasta llenarla, esto desaparecerá"); }, 10000);
 function cambiaEstilo(){
 	document.getElementById("cambio").style.font = "italic bold 20px times new roman,serif";
