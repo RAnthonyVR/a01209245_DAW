@@ -10,19 +10,19 @@
                     <ol>
                         <li>Los valores locales y maestros de la opcion de configuraciones.</li>
                         <li>La version de PHP que se maneja.</li>
-                        <li>Información del servidos sus módulos y el ambiente.</li>
+                        <li>Información del servidos sus módulos y el ambiente. [1]</li>
                     </ol>
-                    <p>http://php.net/manual/en/function.phpinfo.php</p>
+                    
                 </article>
                 <article>
                         <h6><strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong></h6>
                     <p>En lugar de usar php.ini-development usar php.ini-production.</p>
-                    <p>http://php.net/manual/en/migration53.ini.php</p>
+                    
                 </article>
                 <article>
                         <h6><strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</strong></h6>
                     <p>Se establece una petición del archivo HTML con el servidor, este después solamente es interpretado por nuestro navegador (desde el lado del cliente)</p>
-                    <p>http://www.adelat.org/media/docum/nuke_publico/lenguajes_del_lado_servidor_o_cliente.html</p>
+                   
                 </article>
             </section>
             </div>
@@ -119,6 +119,23 @@
 
             </section>
             </div>
+
+            <section>
+                <header>
+                    <h2 id="Referencias"  >Referencias</h2>
+                </header>
+                    <p>[1] http://php.net/manual/en/function.phpinfo.php</p>
+                    <p>[2] http://php.net/manual/en/migration53.ini.php</p>
+                    <p>[3] http://www.adelat.org/media/docum/nuke_publico/lenguajes_del_lado_servidor_o_cliente.html</p>
+                <header>
+                    <h2  >Consultas de sintaxis para ejercicios</h2>
+                </header>
+                    <p>https://www.youtube.com/watch?v=8MzfG-Z1XtM</p>
+                    <p>https://alvinalexander.com/php/php-charat-char_at-function-string</p>
+                <hr>
+        </section>
+
+            
 
 </div>
 <?php include("footer.html"); ?>
