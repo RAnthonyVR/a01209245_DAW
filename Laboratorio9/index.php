@@ -1,34 +1,47 @@
 <?php include("head.html"); ?>
-<div>
-        <h2>Laboratorio 9</h2>
-        <div>
-        <section id="preguntas">
-                <h4>Preguntas</h4>
-                <article>
-                        <h6><strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.</strong></h6>
+
+<body>
+    <header class="mainTitle">
+            <h1 class="display-2">Laboratorio 9</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+        
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <a class="col-sm" href="#Preguntas"> Preguntas </a> </td>
+                        <td> <a class="col-sm" href="#ejercicios"> Ejercicios</a> </td> <!-- table column -->
+                        <td> <a class="col-sm" href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                    </tr>
+                </tbody>
+            
+            </table>
+        </nav>
+
+        <section>
+            <article class="middle">
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
+                 <h6><strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.</strong></h6>
                     <p>Muestra como output una gran cantidad de informacion del estado o configuración actual del PHP.</p>
                     <ol>
                         <li>Los valores locales y maestros de la opcion de configuraciones.</li>
                         <li>La version de PHP que se maneja.</li>
                         <li>Información del servidos sus módulos y el ambiente. [1]</li>
                     </ol>
-                    
-                </article>
-                <article>
-                        <h6><strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong></h6>
+
+                    <h6><strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong></h6>
                     <p>En lugar de usar php.ini-development usar php.ini-production.</p>
-                    
-                </article>
-                <article>
-                        <h6><strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</strong></h6>
+
+                    <h6><strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</strong></h6>
                     <p>Se establece una petición del archivo HTML con el servidor, este después solamente es interpretado por nuestro navegador (desde el lado del cliente)</p>
-                   
-                </article>
-            </section>
-            </div>
+            </article>
+        </section>
 
-
-        <div>
         <section id="ejercicios">
                 <h4>Ejercicios con arreglos</h4>
 
@@ -59,7 +72,7 @@
                         <br>
                 </form>
 
-               	<h4>Cuadrados y cubos</h4>
+                <h4>Cuadrados y cubos</h4>
 
                 <form action="ejercicio4.php" method="POST">
                     <label>Ingrese un número</label>
@@ -70,7 +83,7 @@
                     <br>
                 </form>
 
-               	<h4>Problema de CodeForces</h4>
+                <h4>Problema de CodeForces</h4>
 
                 <form action="problema.php" method="POST">
                     <label>Ingrese el número de movimientos</label>
@@ -135,7 +148,6 @@
                 <hr>
         </section>
 
-            
+</body>
 
-</div>
 <?php include("footer.html"); ?>
