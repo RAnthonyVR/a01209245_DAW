@@ -1,9 +1,9 @@
-<?php include("head.html"); 
+<?php 
+	require_once("util.php");
+	encabezado(); 
     
-?>
 
-<h1>Enlistar en arreglo</h1>
-<?php
+titulo("Enlistar en arreglo");
 
 $arrString=$_POST["arreglo"];
 $arr = explode(",", $arrString);
@@ -39,7 +39,8 @@ for($i = 0;$i <$tamanio;$i++){
 echo "<br>";
 echo "</div></section>";
   
-?>
-<a href="index.php">Volver al index</a>
+regresarPagina();
 
-<?php include("footer.html"); ?>
+footer();  
+
+?>

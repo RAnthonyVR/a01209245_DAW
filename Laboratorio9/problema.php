@@ -1,9 +1,9 @@
-<?php include("head.html");
+<?php 
+    require_once("util.php");
+    encabezado(); 
+    
 
-?>
-
-<h1>Problema ACM</h1>
-<?php
+titulo("Problema ACM");
 
 $numerOfMoves=$_POST["numMov"];
 $move=$_POST["movimientos"];
@@ -28,10 +28,10 @@ for($i=0;$i<$numerOfMoves;$i++){
     }
 
     echo "El resultado es: " . $coins . "";
-    echo '<br><br><a href="index.html"> Regresar a la página principal</a>';
+
+regresarPagina();
+
+footer();  
 
 ?>
-<a href="index.php">Volver al index</a>
-
-<?php include("footer.html"); ?>
 

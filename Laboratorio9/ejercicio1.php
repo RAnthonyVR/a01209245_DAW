@@ -1,9 +1,8 @@
-<?php include("head.html"); 
+<?php 
+	require_once("util.php");
+	encabezado(); 
     
-?>
-
-<h1>Promedio de un arreglo</h1>
-<?php
+titulo("Promedio de un arreglo");
 
 function promedio($arreglo){
     $suma = 0;
@@ -21,7 +20,7 @@ $arr = explode(",", $arrString);
 echo '<section> <div> <h2>Calcular Promedio</h2>';
 echo 'El promedio del arreglo es: ' . promedio($arr).'</div></section>';
 
-?>
-<a href="index.php">Volver al index</a>
+regresarPagina();
 
-<?php include("footer.html"); ?>
+require_once("util.php");
+footer();  ?>

@@ -1,9 +1,9 @@
-<?php include("head.html"); 
+<?php 
+	require_once("util.php");
+	encabezado(); 
     
-?>
 
-<h1>Mediana de un arreglo</h1>
-<?php
+titulo("Mediana de un arreglo");
 
 $arrString=$_POST["arreglo"];
 $arr = explode(",", $arrString);
@@ -13,7 +13,7 @@ $tamanio=count($arr);
 $mediana=floor($tamanio/2);
 echo "La  mediana del arreglo es: ". $arr[$mediana] . "</div></section>";
            
-?>
-<a href="index.php">Volver al index</a>
+regresarPagina();
 
-<?php include("footer.html"); ?>
+footer();  
+?>
