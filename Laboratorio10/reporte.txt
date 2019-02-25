@@ -17,4 +17,4 @@ El contenido de .csv es lo mismo que el de .sql. Es decir, se transfirió correc
 
 SELECT * FROM Materiales ¿Qué sucedió?
 
-Se imprimen muestran los datos de la tabla.
+Se muestran los datos de la tabla.

@@ -1,5 +1,5 @@
- BULK INSERT a1209245.a1209245.[Materiales]
-   FROM 'e:\wwwroot\a1209245\materiales.csv'
+ BULK INSERT a1209245.a1209245.[Proyectos]
+   FROM 'e:\wwwroot\a1209245\proyectos.csv'
    WITH 
       (
          CODEPAGE = 'ACP',
