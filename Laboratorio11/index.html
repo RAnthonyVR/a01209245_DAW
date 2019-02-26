@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!-- Created by Ricardo Antonio Vazquez R, A01209245, on January 27, 2019 -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- In order to use certain characters -->
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--Import my styles-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+        <title >Laboratorio 11</title>
+    </head>
+    
+    <body>
+
+         <header class="mainTitle">
+            <h1 class="display-2">Laboratorio 11</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+        
+        <!-- Barra de navegación -->
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <a class="col-sm" href="#Forma"> Forma </a> </td>
+                        <td> <a class="col-sm" href="#Preguntas"> Preguntas </a> </td>
+                        <td> <a class="col-sm" href="#SobreMi"> Sobre mí </a> </td> <!-- table column -->
+                        <td> <a class="col-sm" href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+
+
+        <section>
+
+            <article>
+                <h2 id="Forma">Calcula tu huella de carbono en tu hogar</h2>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="Images/imagen1.jpg" class="d-block w-100" alt="naturaleza">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Images/imagen2.jpg" class="d-block w-100" alt="naturaleza">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Images/imagen3.jpg" class="d-block w-100" alt="naturaleza">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+                
+                <br>
+                <h4>Descubre el daño que le estas haciendo al medio ambiente</h4>
+                <br>
+                
+                <div class="align-middle">
+                    
+                    <p> Ingresa tu nombre (será confidencial):</p><input type="text" id="nombre"><p id="retro1"></p>
+                    <br>
+                    <p>Ingresa tu correo:</p><input type="text" id="correo"><p id="retro2"></p>
+                    <br>
+                    <h4>Ingresa al año cuanto consumes de:</h4>
+                    <br>
+                    <p>Electicidad:</p> <input type="text" id="elect"> kWh/año <p id="retro3"></p> <br>
+                    <p>Gas LP: </p> <input type="text" id="glp"> litros/año  <p id="retro4"></p> <br>
+                    <p>Gas propano: </p> <input type="text" id="gp"> kg/año <p id="retro5"></p> <br>
+                    <button type="button" class="btn btn-primary" onclick="resultados()">Ver resultados</button>
+                    <p><strong>Aquí aparecerá el resultado: </strong></p>
+                    <p id=res class="alert alert-primary" role="alert"></p>
+                
+                </div>
+                
+
+
+            </article>
+            <hr>
+            <article>
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
+                    <br>
+                    <ul>
+                        <li class="text-justify"><strong>¿Por qué es una buena práctica separar el controlador de la vista?</strong><br>
+                        Separar la interfaz de la lógica o funcionamiento además de hacer agregarle al sistema mantenibilidad y escalabilidad, es decir agregarle y modificar las funcionalidades de forma sencilla. Permite que un cambio de funcionabilidad no tenga que modificar o afectar a múltiples secciones de código además de que se puede optar por cambiar lenguajes o lógica del sistema de manera independiente de la vista, delegando una sola responsabilidad por cada código. [1]<br>
+                        </li>
+                        
+                        <li class="text-justify"><strong>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</strong><br>
+                        <ul>
+                            <li><strong>$_SERVER: </strong>Contiene información del ambiente de ejecución y del servidor. ( headers, paths y ubicaciones de scripts.)</li>
+                            <li><strong>$_FILES: </strong>Contiene variables para subir archivos de http al script. Utiliza el método POST.</li>
+                            <li><strong>$_REQUEST: </strong>Contiene variables de petición en http. (Por default tiene como conteniedo a $_GET, $_POST Y $_COOKIE).</li>
+                            <li><strong>$_SESSION: </strong>: Contiene variables de las sesione disponibles en el script actual.</li>
+                            <li><strong>$_SESSION: </strong>Contiene variables de entorno pasadas al script.</li>
+                            <li><strong>$_SESSION: </strong>Contiene cookies de http.(variables paras al script)
+                            </li>
+                        </ul>
+                            <p>[2]</p>
+                        </li>
+                        
+                        <li class="text-justify"><strong>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</strong><br>
+                        <ol>
+                            <li><strong>convert_uuencode(): </strong>Codifica una cadena usando el algoritmo uuencode</li>
+                            <li><strong>str_split(): </strong>Divide una cadena en un arreglo.</li>
+                        </ol>
+                            <p>[3]</p>
+                            <br>
+                        </li>
+                        
+                        <li class="text-justify"><strong>¿Qué es XSS y cómo se puede prevenir?</strong><br>
+                        Es una vulnerabilidad conocida como Cross-site Scripting en la que los atacantes explotan la confianza que un usuario tiene en un sitio en particular y volver peligroso para sus usuarios a un sitio legítimo.
+                        Para evitarlo se puede contar con una solución de seguridad instalada y actualizada. Los usuarios lo pueden prevenir viendo el enlace URL y asegurándose que sea seguro. Los desarrolladores deben prevenir los ataques XSS al escapar de su output usando htmlspecialchars () o htmlentities ().
+                        Ambas funciones de PHP convierten los caracteres problemáticos en entidades HTML, lo que hace que el código inyectado se imprima de manera inofensiva y no se renderice. [4]<br>
+                        </li>
+                        
+                    </ul>
+                <hr>
+            </article>
+
+
+        </section>
+
+        
+        
+        <!-- Referencias -->
+        <section>
+                <header>
+                    <h2 id="Referencias"  >Referencias</h2>
+                </header>
+                    <p>[1] https://codigofacilito.com/articulos/mvc-model-view-controller-explicado</p>
+                    <p>[2] http://php.net/manual/en/reserved.variables.php</p>
+                    <p>[3] https://www.w3schools.com/php/php_ref_string.asp</p>
+                    <p>[4] https://www.welivesecurity.com/la-es/2015/04/29/vulnerabilidad-xss-cross-site-scripting-sitios-web/</p>
+        </section>
+        
+        <hr>
+        
+        <!-- Footer -->
+        <footer id="SobreMi" class="page-footer font-small blue">
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <p> Creada Ricardo Antonio Vazquez Rodriguez 2019</p>
+            <p>Correo Personal: apap71@gmail.com</p>
+            <p> Utilicé el editor de <strong>Brackets</strong> </p>
+            <p> Liga de descarga: <a href="http://brackets.io">Brackets.</a> </p>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+        
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Import my JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    </body>
+
+</html>
