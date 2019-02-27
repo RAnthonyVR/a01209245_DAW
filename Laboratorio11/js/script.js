@@ -13,8 +13,7 @@ function resultados(){
     }if(!mail.match(/[@]/)||mail==0){
         document.getElementById("retro2").innerHTML = "Ingresa un correo válido";
         bandera++;
-    }
-    if(isNaN(elect)||elect==0){
+    }if(isNaN(elect)||elect==0){
         document.getElementById("retro3").innerHTML = "Ingresa número";
         bandera++;
     }if(isNaN(gaslp)||gaslp==0){
