@@ -5,6 +5,8 @@
         return $huella;
     }
 
+   
+
     function clasificacion($huella) {
         if($huella>4){
             return true;
@@ -22,7 +24,7 @@
         include('lab11_huellaView.php');
     }
         
-    if (isSet($_GET['huella'])&&isSet($_POST['nombre']) && isSet($_POST['correo'])&& isSet($_POST['elect'])&& isSet($_POST['glp'])&& isSet($_POST['gp'])) {
+    if (isSet($_GET['huella'])) {
         $huella = $_GET['huella'];
         $clasificacion = clasificacion ($huella);
         include('lab11_huellaView.php');

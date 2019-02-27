@@ -1,0 +1,22 @@
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe? 
+
+La inconsistencia es en el orden de la clave, en lugar se seguir con el siguiente valor tomó 1000, porque es el valor que se asignó
+
+¿Qué ocurrió? 
+
+[2019-02-26 17:55:59] [23000][2627] Violation of PRIMARY KEY constraint 'llaveMateriales'. Cannot insert duplicate key in object 'a1209245.Materiales'. The duplicate key value is (1000).
+[2019-02-26 17:55:59] [S0000][3621] The statement has been terminated.
+
+Verifica si la tabla de materiales tiene definido algún constraint (restricción): 
+  sp_helpconstraint materiales 
+
+¿Qué información muestra esta consulta? 
+
+Muestra PRIMARY KEY (clustered) en llaveMateriales
+
+¿Qué sentencias utilizaste para definir las llaves primarias? 
+
+ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero) 
+ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
+
+¿Qué sentencias utilizaste para definir este constrait? 
