@@ -20,3 +20,53 @@ ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero)
 ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
 
 ¿Qué sentencias utilizaste para definir este constrait? 
+ALTER TABLE Entregan add constraint llaveEntregan PRIMARY KEY (Clave,RFC,Numero,Fecha)
+
+¿Qué particularidad observas en los valores para clave, RFC y numero? 
+
+Se agrega el valor de clave y numero de manera inconsistente, empiezan en 0 y el RFC tiene un formato distinto del resto
+
+¿Cómo responde el sistema a la inserción de este registro? 
+
+Lo agrega sin importar la diferencia entre este registro y el resto de ellos.
+
+Intenta nuevamente la inserción del registro inconsistente. 
+¿Qué significa el mensaje que emite el sistema? 
+
+[2019-02-27 12:02:36] [23000][547] The INSERT statement conflicted with the FOREIGN KEY constraint "cfentreganclave". The conflict occurred in database "a1209245", table "a1209245.Materiales", column 'Clave'.
+
+Significa que hubo un conflicto con la inserción del elemento.
+
+¿Qué significado tiene la sentencia anterior? 
+
+Establece un constraint que obliga a la inserción de datos consistentes
+
+¿Qué significan las columnas de esas consultas?
+
+Tiene una columna que define el tipo de constraint, su nombre, las acciones de actualizar, su estatus (activado), y sus llaves de constraint.
+
+¿Qué uso se le está dando a GETDATE()? 
+
+Pone la fecha actual en el formato DD MM YY
+
+¿Tiene sentido el valor del campo de cantidad? 
+
+Sí, es consistente con el resto de los registros.
+
+Intenta insertar un registro con cantidad igual o menor que 0. 
+¿Cómo responde el sistema? 
+
+[2019-02-27 12:15:21] [23000][547] The INSERT statement conflicted with the CHECK constraint "cantidad". The conflict occurred in database "a1209245", table "a1209245.Entregan", column 'Cantidad'.
+
+Marca un conflicto en la inserción del dato.
+
+¿Qué significa el mensaje? 
+
+Que existió un conflicto por el constraint establecido
+
+Explica el concepto de integridad referencial
+
+La integridad referencial se refiere a las reglas establecidas en bases dude datos para validar los registros de las tablas y omitir errores  como la modificación y eliminación de datos. Generando integridad y consistencia en la BD.[1]
+
+[1] https://www.aulaclic.es/sql/b_8_1_1.htm
+
