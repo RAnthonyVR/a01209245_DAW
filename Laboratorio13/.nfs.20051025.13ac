@@ -1,5 +1,5 @@
 <?php
- session_start();
+    session_start();
     if($_SESSION["username"] == "Tony"){
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -33,10 +33,7 @@
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-        // if everything is ok, try to upload file
-        } else {
+        if ($uploadOk == 1) {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
                 $_SESSION["imagen"]= $target_file;
@@ -44,7 +41,11 @@
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
-        }
+        // if everything is ok, try to upload file
+        } /*else {
+            echo "Sorry, your file was not uploaded.";
+            
+        }*/
     }else{
         header("location:index.php");
     }

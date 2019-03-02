@@ -11,3 +11,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title >Laboratorio 13</title>
     </head>
+
+    <body>
+        <header class="mainTitle">
+                <h1 class="display-2">Laboratorio 13</h1>
+                <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+                <div></div>
+            </header>
+            <hr>
+
+            <nav>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> <a class="col-sm" href="#Preguntas"> Preguntas </a> </td>
+                            <td> <a class="col-sm" href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                            <?php if(isset($_SESSION["username"])&&isset($_SESSION["password"])): ?>
+                            <td> <a class="col-sm" href="logout.php">Cerrar sesion</a></li>
+                            <?php endif; ?>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </nav>
