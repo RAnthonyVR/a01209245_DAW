@@ -1,0 +1,65 @@
+<body>
+    <header class="mainTitle">
+            <h1 class="display-2">Laboratorio 13</h1>
+            <h2>R. Antonio Vázquez Rodríguez A01209245</h2>
+            <div></div>
+        </header>
+        <hr>
+
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <a class="col-sm" href="#Preguntas"> Preguntas </a> </td>
+                        <td> <a class="col-sm" href="#ejercicios"> Ejercicios</a> </td> <!-- table column -->
+                        <td> <a class="col-sm" href="#Referencias"> Referencias </a> </td> <!-- table column -->
+                    </tr>
+                </tbody>
+
+            </table>
+        </nav>
+
+        <section>
+            <article class="middle">
+                <header>
+                    <h2 id="Preguntas" >Preguntas</h2>
+                </header>
+                    <h6><strong>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</strong></h6>
+                    <p>La función session_unset() libera todas las variables asignadas de sesión. [1] Mientras
+                    Que sesión_destroy() destruye todos los datos asociados con la sesión actual. Pero no elimina las variables asociadas con la sesión. [2]
+                    </p>
+
+                    <h6><strong>¿Cuál es la diferencia entre una variable de sesión y una cookie?</strong></h6>
+                    <p>Una variable de sesión se almacena del lado del servidor y solo se mantiene durante la 
+                      sesión de un usuario mientras que una variable cookie se almacena del lado del cliente.
+                      Es por ello por lo que las cookies tienen un tiempo de vida mayor que las sesiones. Ambos
+                       se utilizan para generar persistencia entre los datos. [3]</p>
+
+                    <h6><strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong></h6>
+                    <p>Se revisa si ya existe en las variables de sesión del usuario el archivo.</p>
+
+                    <h6><strong>¿Qué es CSRF y cómo puede prevenirse?</strong></h6>
+                    <p>La vulnerabilidad Cross Site Request Forgery.  Obliga al navegador web de una víctima, validado en algún servicio o sesión a enviar una petición a una aplicación web vulnerable.
+                    Se puede preevenir configurando el navegador, cerrar las sesiones. [4]
+                    </p>
+
+                    </article>
+        </section>
+
+        <section id="ejercicios">
+
+        </section>
+            </div>
+
+            <section>
+                <header>
+                    <h2 id="Referencias"  >Referencias</h2>
+                </header>
+                    <p>[1] http://php.net/manual/en/function.session-unset.php</p>
+                    <p>[2] http://php.net/manual/en/function.session-destroy.php</p>
+                    <p>[3]https://es.stackoverflow.com/questions/75727/cookies-vs-sesiones</p>
+                    <p>[4] https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)</p>
+                <hr>
+           </section>
+
+</body>
