@@ -1,0 +1,16 @@
+
+        <section>
+            <article class="middle">
+                <header>
+                    <h2 id="Preguntas" >Cargar imagen</h2>
+                </header>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Seleccionar imagen a subir:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+                 <?php if (isset($_SESSION["imagen"])): ?>
+                    <img src="<?=$_SESSION["imagen"]?>" alt="Imagen cargada">
+                <?php endif ?>
+            </article>
+        </section>
