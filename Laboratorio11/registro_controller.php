@@ -26,7 +26,7 @@ if(isset($_POST['calcular'])){
     $_POST["nombre"] = htmlentities($_POST["nombre"]);
     $_POST["correo"] = htmlentities($_POST["correo"]);
     $_POST["elect"] = htmlentities($_POST["elect"]);
-    if (isset($_POST['nombre']) && isset($_POST['correo'])&& isset($_POST['elect'])&& isset($_POST['glp'])&& isset($_POST['gp'])  && $_POST["elect"] != "" && $_POST["glp"] != ""
+    if (isset($_POST['nombre'])&&isset($_POST['correo'])&& isset($_POST['elect'])&& isset($_POST['glp'])&& isset($_POST['gp'])&&$_POST["elect"] != "" && $_POST["glp"] != ""
            && $_POST["gp"] != "" ) {
         $huella = calcularHuella($_POST['elect'], $_POST['glp'],$_POST['gp']);
         $clasificacion = clasificacion ($huella);
