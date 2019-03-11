@@ -8,7 +8,7 @@
     echo '<table><thead><h2>Listado de todas las frutas</h2><tr><th>Nombre</th><th>Unidad(es)</th><th>Cantidad(es)</th><th>Precio Por Unidad</th><th>País de origen</th></tr></thead><tbody>';
 
     //Imprimir cada fila
-    while($row=mysqli_fetch_assoc($result)){
+  while($row=mysqli_fetch_assoc($result)){
       echo '<tr>';
       echo '<td>'.$row["name"].'</td>';
       echo '<td>'.$row["units"].'</td>';
