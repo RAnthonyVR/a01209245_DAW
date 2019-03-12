@@ -50,18 +50,18 @@
   
   //MODELO Funcion que elimina un registro
   function delete_by_name($fruit_name){
-    $conn=connectDb();
+    $conn=conectDb();
     $sql="DELETE FROM Frutas WHERE name='" . $fruit_name . "'";
-    $result=mysql_query($conn,$sql);
+    $result=mysqli_query($conn,$sql);
     closeDb($conn);
     return $result;
   }
   
   //MODELO Funcion que actualiza un registro
-  function update_by_id($id,$name, $units, $quantity, $price, $country){
-    $conn=connectDb();
-    $sql="UPDATE Frutas SET name=$name, units=$units, quantity=$quantity, price=$price, country=$country WHERE id ='". $id . "'";
-    $result=mysql_query($conn,$sql);
+  function update_by_name($name, $units, $quantity, $price, $country){
+    $conn=conectDb();
+    $sql="UPDATE Frutas SET units=$units, quantity=$quantity, price=$price, country=$country WHERE name LIKE '%".$name."%'";
+    $result=mysqli_query($conn,$sql);
     closeDb($conn);
     return $result;
   }

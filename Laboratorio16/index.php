@@ -4,6 +4,8 @@
   $result=getFruits();
   include("partials/_preguntas.html");
   echo '<div class="text-center"><a href="agregar_fruta.php" class="btn btn-primary btn-lg active align-middle" role="button" aria-pressed="true">Agregar Fruta</a><div class="text-center">';
+  include("partials/_formEliminar.html");
+  include("partials/_formEditar.html");
   if(mysqli_num_rows($result)>0){
     echo '<table><thead><h2>Listado de todas las frutas</h2><tr><th>Nombre</th><th>Unidad(es)</th><th>Cantidad(es)</th><th>Precio Por Unidad</th><th>País de origen</th></tr></thead><tbody>';
 
