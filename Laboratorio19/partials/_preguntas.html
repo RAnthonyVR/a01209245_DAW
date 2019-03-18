@@ -1,0 +1,50 @@
+<section>
+  <article class="middle">
+    <header>
+      <h2 id="Preguntas" >Preguntas</h2>
+    </header>
+    
+    <h6><strong>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</strong></h6>
+      <p>AJAX “Asynchronous JavaScript And XML”, se podría definer como el conjunto de soluciones RIA basadas 
+      en JavaScript. Y la tecnología RIA tiene como objetivo combinar las ventajas de las aplicaciones de escritorio 
+      con las de las aplicaciones web, enriqueciendo al cliente. Los productos JavaScript / AJAX son apropiados en 
+      situaciones donde el usuario espera que una aplicación funcione incondicionalmente en los navegadores. Al comprar un 
+      DVD o reservar un vuelo, por ejemplo, nadie querrá instalar un complemento. [1]</p>
+      
+    <h6><strong>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del 
+    lado del cliente o del lado del servidor?</strong></h6>
+      <p>Además de las implicaciones de SQL Inyection y Cross Side Scripting se agregan algunas consideraciones que se mencionan a continuación:
+Las validaciones de seguridad de deben de hacer, como siempre, tanto del lado del cliente como del lado del servidos. 
+</p>
+      <p>Del lado del cliente (Javascript) se dan las siguientes recomendaciones:</p>
+      <ul>
+        <li>Usar .innerText en lugar de .innerHtml</li>
+        <li>No usar eval()</li>
+        <li>No depender de la lógica de negocio del cliente.</li>
+        <li>Evitar usar XML o JSON dinámicamente.</li>
+        <li>No encriptar del lado del cliente.</li>
+      </ul>
+      <p>Del lado del servidor se dan las siguientes recomendaciones:</p>
+      <ul>
+        <li>Usar protección CSRF (Cross-Site Request Forgery)</li>
+        <li>Protegesre ante JSON Hijacking para buscadores anteriores.</li>
+        <li>Evitar escribit código de searializacion.</li>
+      </ul>
+    
+    <h6><strong>¿Qué es JSON?</strong></h6>
+      <p>Javascript Object Notation es un formato de texto para serializar datos estructurados (cadenas, números, 
+      booleanos, nulos, objetos y arreglos). Proviene del lenguaje de programación ECMAScript.  [3]</p>
+    </article>
+</section>
+
+
+<section>
+    <header>
+      <h2 id="Referencias"  >Referencias</h2>
+    </header>
+      <p>[1] https://www.javalobby.org/articles/ajax-ria-overview/</p>
+      <p>[2] https://www.owasp.org/index.php/AJAX_Security_Cheat_Sheet</p>
+      <p>[3] https://frontendlabs.io/1490--json-que-es-json-parse-json-stringify</p>
+    <hr>
+</section>
+  
