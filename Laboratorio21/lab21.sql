@@ -219,3 +219,64 @@ AS
 GO
 
 EXECUTE queryMaterial 'Lad',20
+
+/*Frutas*/
+
+
+
+//CreaFruta
+
+
+DROP PROCEDURE IF EXISTS creaFruta;
+//
+CREATE PROCEDURE creaFruta(
+ IN name VARCHAR(25),
+ IN units INT(10),
+ IN quantity INT(10),
+ IN price INT(10),
+ IN country VARCHAR(25)
+) 
+BEGIN
+INSERT INTO Frutas VALUES (name,units,quantity,price,country));
+END//
+
+CALL sp_in('FrutaPrueba',2,3,50,'Mexico');
+
+
+EXECUTE creaMaterial 1470,'Remachador',300,4
+SELECT * FROM Materiales
+
+//modificaMaterial
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'modificaMaterial' AND type = 'P')
+    DROP PROCEDURE modificaMaterial
+GO
+
+CREATE PROCEDURE modificaMaterial
+    @uclave NUMERIC(5,0),
+    @udescripcion VARCHAR(50),
+    @ucosto NUMERIC(8,2),
+    @uimpuesto NUMERIC(6,2)
+AS
+    UPDATE Materiales SET Clave=@uclave, Descripcion=@udescripcion, Costo=@ucosto, PorcentajeImpuesto=@uimpuesto WHERE Clave LIKE @uclave
+GO
+
+EXECUTE modificaMaterial 1470,'Remachador',300,4
+SELECT * FROM Materiales
+
+//eliminaMaterial
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'eliminaMaterial' AND type = 'P')
+    DROP PROCEDURE eliminaMaterial
+GO
+
+CREATE PROCEDURE eliminaMaterial
+    @uclave NUMERIC(5,0)
+AS
+    DELETE FROM Materiales WHERE Clave=@uclave
+GO
+
+EXECUTE eliminaMaterial 5000
+SELECT * FROM Materiales
+
+
+
