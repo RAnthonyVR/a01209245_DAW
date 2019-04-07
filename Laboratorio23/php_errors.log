@@ -1,0 +1,75 @@
+[07-Apr-2019 16:22:14 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Please activate your Mailgun account. Check your inbox or log in to your control panel to resend the activation email.' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Ar in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 16:22:47 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Please activate your Mailgun account. Check your inbox or log in to your control panel to resend the activation email.' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Ar in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 16:30:52 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Please activate your Mailgun account. Check your inbox or log in to your control panel to resend the activation email.' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Ar in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 16:44:09 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 16:45:16 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 17:41:10 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 17:41:20 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 17:42:52 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 17:44:10 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 18:03:29 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 18:03:49 UTC] PHP Fatal error:  Uncaught exception 'Mailgun\Connection\Exceptions\MissingRequiredParameters' with message 'The parameters passed to the API were invalid. Check your inputs! Need at least one of 'text' or 'html' parameters specified' in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(110): Mailgun\Connection\RestClient->responseHandler(Object(GuzzleHttp\Psr7\Response))
+#1 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php(179): Mailgun\Connection\RestClient->send('POST', 'sandbox63aea96c...', Array, Array)
+#2 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(208): Mailgun\Connection\RestClient->post('sandbox63aea96c...', Array, Array)
+#3 /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Mailgun.php(139): Mailgun\Mailgun->post('sandbox63aea96c...', Array, Array)
+#4 /home/ubuntu/workspace/lab23/controlador/envi in /home/ubuntu/workspace/vendor/mailgun/mailgun-php/src/Mailgun/Connection/RestClient.php on line 254
+[07-Apr-2019 18:04:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/lab23/controlador/enviar.php on line 11
