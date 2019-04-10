@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Lab25</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                margin: 50px 0 0 0;
+                padding: 0;
+                width: 100%;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                text-align: center;
+                color: #aaa;
+                font-size: 18px;
+            }
+
+            h1 {
+                color: #719e40;
+                letter-spacing: -3px;
+                font-family: 'Lato', sans-serif;
+                font-size: 100px;
+                font-weight: 200;
+                margin-bottom: 0;
+            }img { 
+              width: 100%; 
+              height: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Laboratorio 25</h1>
+            <div>Mercado de frutas</div>
+        
+        <?php if (isset($name)) : ?>
+            <h2>¡Bienvenid@ de regreso <?= htmlspecialchars($name); ?>!</h2>
+        <?php else: ?>
+            <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
+            
+        <?php endif; ?>
+        
+        
+
+        
+        <?php if (isset($consulta)) : ?>
+            <img src="frutas.jpg" alt="Frutas" >
+            
+        <?php endif; ?>
+        
+        <?php 
+        require_once ("util.php");
+          
+        if (!isset($precio)){
+          $result=getFruits();
+          
+            }else{
+                $result=getCheapestFruits($precio);
+            }
+        if(mysqli_num_rows($result)>0){
+            echo '<div class="text-center" ><table><thead><h2>Listado de todas las frutas</h2><tr><th>Nombre</th><th>Unidad(es)</th><th>Cantidad(es)</th><th>Precio Por Unidad</th><th>País de origen</th></tr></thead><tbody>';
+        
+            //Imprimir cada fila
+            while($row=mysqli_fetch_assoc($result)){
+              echo '<tr>';
+              echo '<td>'.$row["name"].'</td>';
+              echo '<td>'.$row["units"].'</td>';
+              echo '<td>'.$row["quantity"].'</td>';
+              echo '<td>'.$row["price"].'</td>';
+              echo '<td>'.$row["country"].'</td>';
+              echo '</tr>';
+            }
+          }
+            echo '</tbody></table></div>';
+            
+            mysqli_free_result($result); //Se libera la variable de memoria
+             echo '<hr>';
+        ?>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <section>
+          <article class="middle">
+            <header>
+              <h2 id="Preguntas" >Preguntas</h2>
+            </header>
+            
+            <h6><strong>¿A qué se refiere la descentralización de servicios web?</strong></h6>
+              
+              <p>Esto se refiere a que en lugar de tener todos los servicios web en un solo servidor con 
+              dependencia entre ellos, distintos servidores se comunican entre sí pidiendo y entregando 
+              servicios que pueden ser consumidos desde algún cliente que solamente contiene la vista del servicio.</p>
+              
+            <h6><strong>¿Cómo puede implementarse un entorno con servicios web disponibles aún cuando falle un servidor?</strong></h6>
+              <p>Cuando hay muchos servidores proporcionando el mismo servicio, por ejemplo, en las grandes empresas como Netflix o Google. Solamente se especifica el servicio que se desea obtener y los servidores se comunican entre sí para encontrar otro servidor con el servicio. Puedes tener el servicio desde donde sea y desde cualquier lugar consumirlo.</p>
+        </section>
+        
+        <br>
+        <hr>
+        <br>
+        
+    </body>
+</html>
